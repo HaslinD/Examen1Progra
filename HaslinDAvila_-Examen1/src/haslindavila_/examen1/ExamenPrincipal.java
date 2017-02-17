@@ -5,6 +5,10 @@
  */
 package haslindavila_.examen1;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Fiery_000
@@ -42,7 +46,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         tf_id = new javax.swing.JTextField();
         tf_idloteria = new javax.swing.JTextField();
         jp_edad = new javax.swing.JSpinner();
-        jTextField4 = new javax.swing.JTextField();
+        tf_dinero = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         tf_empleo = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
@@ -52,7 +56,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         jp_edad1 = new javax.swing.JSpinner();
         tf_nombre1 = new javax.swing.JTextField();
         cb_Depart1 = new javax.swing.JComboBox<>();
-        jTextField5 = new javax.swing.JTextField();
+        tf_dinero1 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -72,7 +76,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         tf_nombre3 = new javax.swing.JTextField();
         cb_Depart3 = new javax.swing.JComboBox<>();
         jLabel25 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        tf_dinero2 = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
         cb_afiliacion = new javax.swing.JComboBox<>();
         jButton5 = new javax.swing.JButton();
@@ -80,7 +84,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        empleados = new javax.swing.JTable();
+        tableEmpl = new javax.swing.JTable();
         jLabel28 = new javax.swing.JLabel();
         tf_nombre4 = new javax.swing.JTextField();
         cb_Depart4 = new javax.swing.JComboBox<>();
@@ -92,15 +96,16 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         tf_idloteria4 = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        tf_dinero3 = new javax.swing.JTextField();
         tf_empleo2 = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tableEstud = new javax.swing.JTable();
         jPanel9 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tablePolit = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jt_allnames = new javax.swing.JTable();
-        jButton7 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         tf_user = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -128,6 +133,11 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         jLabel9.setText("Empleo");
 
         jButton3.setText("E N T E R");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -159,7 +169,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField4))
+                        .addComponent(tf_dinero))
                     .addComponent(cb_Depart, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(62, 62, 62))
             .addGroup(jPanel4Layout.createSequentialGroup()
@@ -177,7 +187,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
                         .addGap(50, 50, 50)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tf_dinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
@@ -224,6 +234,11 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         jLabel15.setText("Carreras");
 
         jButton4.setText("E N T E R");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -252,7 +267,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
                         .addGroup(jPanel5Layout.createSequentialGroup()
                             .addComponent(jLabel10)
                             .addGap(18, 18, 18)
-                            .addComponent(jTextField5))
+                            .addComponent(tf_dinero1))
                         .addComponent(cb_Depart1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel15)
@@ -274,7 +289,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
                         .addGap(50, 50, 50)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel10)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tf_dinero1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(42, 42, 42))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -322,6 +337,11 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         cb_afiliacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alianza", "FAPER", "APH", "Liberal", "Nacional" }));
 
         jButton5.setText("E N T E R");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -350,7 +370,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
                         .addGroup(jPanel6Layout.createSequentialGroup()
                             .addComponent(jLabel25)
                             .addGap(18, 18, 18)
-                            .addComponent(jTextField7))
+                            .addComponent(tf_dinero2))
                         .addComponent(cb_Depart3, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel26)
@@ -372,7 +392,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
                         .addGap(50, 50, 50)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel25)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tf_dinero2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(42, 42, 42))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -418,7 +438,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Agregar", jPanel1);
 
-        empleados.setModel(new javax.swing.table.DefaultTableModel(
+        tableEmpl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -426,7 +446,12 @@ public class ExamenPrincipal extends javax.swing.JFrame {
                 "Nombre", "Edad", "ID"
             }
         ));
-        jScrollPane2.setViewportView(empleados);
+        tableEmpl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableEmplMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(tableEmpl);
 
         jLabel28.setText("Persona");
 
@@ -445,6 +470,16 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         jLabel33.setText("Dinero");
 
         jButton6.setText("Modify");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -481,7 +516,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addComponent(jLabel33)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField8))
+                                .addComponent(tf_dinero3))
                             .addComponent(cb_Depart4, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -495,11 +530,13 @@ public class ExamenPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(cb_Depart4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cb_Depart4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(8, 8, 8)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel33)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tf_dinero3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel32)
@@ -519,35 +556,66 @@ public class ExamenPrincipal extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel31)
-                            .addComponent(tf_idloteria4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jButton6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tf_idloteria4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Empleado", jPanel7);
 
+        tableEstud.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Edad", "ID"
+            }
+        ));
+        jScrollPane3.setViewportView(tableEstud);
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 561, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 298, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(203, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Estudiante", jPanel8);
+
+        tablePolit.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Edad", "ID"
+            }
+        ));
+        jScrollPane4.setViewportView(tablePolit);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 561, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 298, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(203, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Politico", jPanel9);
@@ -571,39 +639,15 @@ public class ExamenPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Modificar", jPanel2);
 
-        jt_allnames.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Nombre", "Edad", "ID"
-            }
-        ));
-        jScrollPane1.setViewportView(jt_allnames);
-
-        jButton7.setText("E L I M I N A R");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 563, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(193, 193, 193)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 575, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jButton7)
-                .addContainerGap(46, Short.MAX_VALUE))
+            .addGap(0, 336, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Eliminar", jPanel3);
@@ -702,6 +746,128 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        String empleo, nombre, idloteria, departamentos;
+        int edad;
+        long id;
+        double dinero;
+        try {
+            nombre = tf_nombre.getText();
+            edad = Integer.parseInt(jp_edad.getValue().toString());
+            id = Long.parseLong(tf_id.getText());
+            idloteria = tf_idloteria.getText();
+            departamentos = cb_Depart.getSelectedItem().toString();
+            dinero = Double.parseDouble(tf_dinero.getText());
+            empleo = tf_empleo.getText();
+            person.add(new Empleados(empleo, nombre, edad, id, idloteria, departamentos, dinero));
+            
+            JOptionPane.showMessageDialog(null, "Ha sido agregado exitosamente");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ha ocurrido un error");
+        }
+        tf_nombre.setText("");
+        jp_edad.setValue(18);
+        tf_id.setText("");
+        tf_idloteria.setText("");
+        cb_Depart.setSelectedIndex(0);
+        tf_dinero.setText("");
+        tf_empleo.setText("");
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        String carrera, nombre, idloteria, departamentos;
+        int edad;
+        long id;
+        double dinero;
+        try {
+            nombre = tf_nombre1.getText();
+            edad = Integer.parseInt(jp_edad1.getValue().toString());
+            id = Long.parseLong(tf_id1.getText());
+            idloteria = tf_idloteria1.getText();
+            departamentos = cb_Depart1.getSelectedItem().toString();
+            dinero = Double.parseDouble(tf_dinero1.getText());
+            carrera = tf_carrera.getText();
+            person.add(new Estudiantes(carrera, nombre, edad, id, idloteria, departamentos, dinero));
+            
+            JOptionPane.showMessageDialog(null, "Ha sido agregado exitosamente");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ha ocurrido un error");
+        }
+        tf_nombre1.setText("");
+        jp_edad1.setValue(18);
+        tf_id1.setText("");
+        tf_idloteria1.setText("");
+        cb_Depart1.setSelectedIndex(0);
+        tf_dinero1.setText("");
+        tf_carrera.setText("");
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        String afiliacion, nombre, idloteria, departamentos;
+        int edad;
+        long id;
+        double dinero;
+        try {
+            nombre = tf_nombre3.getText();
+            edad = Integer.parseInt(jp_edad3.getValue().toString());
+            id = Long.parseLong(tf_id3.getText());
+            idloteria = tf_idloteria3.getText();
+            departamentos = cb_Depart3.getSelectedItem().toString();
+            dinero = Double.parseDouble(tf_dinero3.getText());
+            afiliacion = cb_afiliacion.getSelectedItem().toString();
+            person.add(new Politico(afiliacion, nombre, edad, id, idloteria, departamentos, dinero));
+            
+            JOptionPane.showMessageDialog(null, "Ha sido agregado exitosamente");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ha ocurrido un error");
+        }
+        tf_nombre3.setText("");
+        jp_edad3.setValue(18);
+        tf_id3.setText("");
+        tf_idloteria3.setText("");
+        cb_Depart3.setSelectedIndex(0);
+        tf_dinero3.setText("");
+        cb_afiliacion.setSelectedIndex(0);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        String empleo, nombre, idloteria, departamentos;
+        int edad;
+        long id;
+        double dinero;
+        if (person.get(pos) instanceof Empleados) {
+            nombre = tf_nombre4.getText();
+            edad = Integer.parseInt(jp_edad4.getValue().toString());
+            id = Long.parseLong(tf_id4.getText());
+            idloteria = tf_idloteria4.getText();
+            departamentos = cb_Depart4.getSelectedItem().toString();
+            dinero = Double.parseDouble(tf_dinero3.getText());
+            empleo = tf_empleo2.getText();
+        }
+        tf_nombre4.setText("");
+        jp_edad4.setValue(18);
+        tf_id4.setText("");
+        tf_idloteria4.setText("");
+        cb_Depart4.setSelectedIndex(0);
+        tf_dinero3.setText("");
+        tf_empleo2.setText("");
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        DefaultTableModel modelo =(DefaultTableModel)tableEmpl.getModel();
+        Object[] newrow = {};
+        modelo.addRow(newrow);
+        tableEmpl.setModel(modelo);
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void tableEmplMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableEmplMouseClicked
+        DefaultTableModel modelo = (DefaultTableModel)tableEmpl.getModel();
+        modelo.removeRow(tableEmpl.getSelectedRow());
+        pos = tableEmpl.getSelectedRowCount();
+        person.remove(tableEmpl.getSelectedRowCount());
+        tableEmpl.setModel(modelo);
+    }//GEN-LAST:event_tableEmplMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -744,14 +910,12 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cb_Depart3;
     private javax.swing.JComboBox<String> cb_Depart4;
     private javax.swing.JComboBox<String> cb_afiliacion;
-    private javax.swing.JTable empleados;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -788,22 +952,25 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JSpinner jp_edad;
     private javax.swing.JSpinner jp_edad1;
     private javax.swing.JSpinner jp_edad3;
     private javax.swing.JSpinner jp_edad4;
-    private javax.swing.JTable jt_allnames;
     private javax.swing.JPasswordField pf_pass;
+    private javax.swing.JTable tableEmpl;
+    private javax.swing.JTable tableEstud;
+    private javax.swing.JTable tablePolit;
     private javax.swing.JTextField tf_carrera;
+    private javax.swing.JTextField tf_dinero;
+    private javax.swing.JTextField tf_dinero1;
+    private javax.swing.JTextField tf_dinero2;
+    private javax.swing.JTextField tf_dinero3;
     private javax.swing.JTextField tf_empleo;
     private javax.swing.JTextField tf_empleo2;
     private javax.swing.JTextField tf_id;
@@ -820,4 +987,6 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_nombre4;
     private javax.swing.JTextField tf_user;
     // End of variables declaration//GEN-END:variables
+    ArrayList<Personas> person = new ArrayList();
+    int pos;
 }

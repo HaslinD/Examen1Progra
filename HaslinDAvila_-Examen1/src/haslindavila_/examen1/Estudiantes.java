@@ -7,7 +7,7 @@ public class Estudiantes extends Personas{
         super();
     }
 
-    public Estudiantes(String carreras, String nombre, int edad, long id, int idloteria, String departamentos, double dinero) {
+    public Estudiantes(String carreras, String nombre, int edad, long id, String idloteria, String departamentos, double dinero) {
         super(nombre, edad, id, idloteria, departamentos, dinero);
         this.carreras = carreras;
     }

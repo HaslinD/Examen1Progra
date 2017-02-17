@@ -4,14 +4,14 @@ public class Personas {
     private String nombre;
     private int edad;
     private long id;
-    private int idloteria;
+    private String idloteria;
     private String departamentos;
     private double dinero;
 
     public Personas() {
     }
 
-    public Personas(String nombre, int edad, long id, int idloteria, String departamentos, double dinero) {
+    public Personas(String nombre, int edad, long id, String idloteria, String departamentos, double dinero) {
         this.nombre = nombre;
         this.edad = edad;
         this.id = id;
@@ -44,11 +44,11 @@ public class Personas {
         this.id = id;
     }
 
-    public int getIdloteria() {
+    public String getIdloteria() {
         return idloteria;
     }
 
-    public void setIdloteria(int idloteria) {
+    public void setIdloteria(String idloteria) {
         this.idloteria = idloteria;
     }
 

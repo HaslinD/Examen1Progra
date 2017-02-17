@@ -116,7 +116,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jTextField4" max="32767" attributes="0"/>
+                                          <Component id="tf_dinero" max="32767" attributes="0"/>
                                       </Group>
                                       <Component id="cb_Depart" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
                                   </Group>
@@ -139,7 +139,7 @@
                                           <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tf_dinero" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
@@ -244,7 +244,7 @@
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField4">
+                        <Component class="javax.swing.JTextField" name="tf_dinero">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel9">
                           <Properties>
@@ -257,6 +257,9 @@
                           <Properties>
                             <Property name="text" type="java.lang.String" value="E N T E R"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -309,7 +312,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jTextField5" max="32767" attributes="0"/>
+                                              <Component id="tf_dinero1" max="32767" attributes="0"/>
                                           </Group>
                                           <Component id="cb_Depart1" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
                                       </Group>
@@ -338,7 +341,7 @@
                                           <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tf_dinero1" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="42" pref="42" max="-2" attributes="0"/>
                                       </Group>
@@ -416,7 +419,7 @@
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField5">
+                        <Component class="javax.swing.JTextField" name="tf_dinero1">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel10">
                           <Properties>
@@ -454,6 +457,9 @@
                           <Properties>
                             <Property name="text" type="java.lang.String" value="E N T E R"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -506,7 +512,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jTextField7" max="32767" attributes="0"/>
+                                              <Component id="tf_dinero2" max="32767" attributes="0"/>
                                           </Group>
                                           <Component id="cb_Depart3" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
                                       </Group>
@@ -535,7 +541,7 @@
                                           <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tf_dinero2" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="42" pref="42" max="-2" attributes="0"/>
                                       </Group>
@@ -638,7 +644,7 @@
                             <Property name="text" type="java.lang.String" value="Dinero"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField7">
+                        <Component class="javax.swing.JTextField" name="tf_dinero2">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel26">
                           <Properties>
@@ -665,6 +671,9 @@
                           <Properties>
                             <Property name="text" type="java.lang.String" value="E N T E R"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -756,7 +765,7 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jTextField8" max="32767" attributes="0"/>
+                                                  <Component id="tf_dinero3" max="32767" attributes="0"/>
                                               </Group>
                                               <Component id="cb_Depart4" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
                                           </Group>
@@ -776,11 +785,14 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="cb_Depart4" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="cb_Depart4" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jButton6" min="-2" pref="68" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tf_dinero3" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
@@ -809,7 +821,6 @@
                                               <Component id="tf_idloteria4" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Component id="jButton6" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="55" max="32767" attributes="0"/>
                               </Group>
@@ -824,7 +835,7 @@
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                           <SubComponents>
-                            <Component class="javax.swing.JTable" name="empleados">
+                            <Component class="javax.swing.JTable" name="tableEmpl">
                               <Properties>
                                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                   <Table columnCount="3" rowCount="0">
@@ -834,6 +845,9 @@
                                   </Table>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tableEmplMouseClicked"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -909,7 +923,7 @@
                             <Property name="text" type="java.lang.String" value="Dinero"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField8">
+                        <Component class="javax.swing.JTextField" name="tf_dinero3">
                         </Component>
                         <Component class="javax.swing.JTextField" name="tf_empleo2">
                         </Component>
@@ -917,6 +931,10 @@
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Modify"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton6MouseClicked"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -932,15 +950,45 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="561" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jScrollPane3" pref="549" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="298" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jScrollPane3" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <EmptySpace pref="203" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
+                      <SubComponents>
+                        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTable" name="tableEstud">
+                              <Properties>
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                  <Table columnCount="3" rowCount="0">
+                                    <Column editable="true" title="Nombre" type="java.lang.Object"/>
+                                    <Column editable="true" title="Edad" type="java.lang.Object"/>
+                                    <Column editable="true" title="ID" type="java.lang.Object"/>
+                                  </Table>
+                                </Property>
+                              </Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                      </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel9">
                       <Constraints>
@@ -954,15 +1002,45 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="561" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jScrollPane4" pref="549" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="298" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jScrollPane4" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <EmptySpace pref="203" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
+                      <SubComponents>
+                        <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTable" name="tablePolit">
+                              <Properties>
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                  <Table columnCount="3" rowCount="0">
+                                    <Column editable="true" title="Nombre" type="java.lang.Object"/>
+                                    <Column editable="true" title="Edad" type="java.lang.Object"/>
+                                    <Column editable="true" title="ID" type="java.lang.Object"/>
+                                  </Table>
+                                </Property>
+                              </Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                      </SubComponents>
                     </Container>
                   </SubComponents>
                 </Container>
@@ -980,57 +1058,15 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" pref="563" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="193" max="-2" attributes="0"/>
-                          <Component id="jButton7" min="-2" pref="180" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="0" pref="575" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" pref="176" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="jButton7" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="46" max="32767" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="0" pref="336" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
-              <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-                  <AuxValues>
-                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                  </AuxValues>
-
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                  <SubComponents>
-                    <Component class="javax.swing.JTable" name="jt_allnames">
-                      <Properties>
-                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="3" rowCount="0">
-                            <Column editable="true" title="Nombre" type="java.lang.Object"/>
-                            <Column editable="true" title="Edad" type="java.lang.Object"/>
-                            <Column editable="true" title="ID" type="java.lang.Object"/>
-                          </Table>
-                        </Property>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Component class="javax.swing.JButton" name="jButton7">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="E L I M I N A R"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
             </Container>
           </SubComponents>
         </Container>
