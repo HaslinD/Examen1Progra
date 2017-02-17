@@ -91,11 +91,6 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tablePolit = new javax.swing.JTable();
-        jPanel3 = new javax.swing.JPanel();
-        jTabbedPane4 = new javax.swing.JTabbedPane();
-        jPanel10 = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
-        jPanel12 = new javax.swing.JPanel();
         modEmpleado = new javax.swing.JDialog();
         jLabel28 = new javax.swing.JLabel();
         tf_nombre4 = new javax.swing.JTextField();
@@ -603,64 +598,6 @@ public class ExamenPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Modificar", jPanel2);
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 561, Short.MAX_VALUE)
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 298, Short.MAX_VALUE)
-        );
-
-        jTabbedPane4.addTab("Empleado", jPanel10);
-
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 561, Short.MAX_VALUE)
-        );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 298, Short.MAX_VALUE)
-        );
-
-        jTabbedPane4.addTab("Estudiante", jPanel11);
-
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 561, Short.MAX_VALUE)
-        );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 298, Short.MAX_VALUE)
-        );
-
-        jTabbedPane4.addTab("Politico", jPanel12);
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane4)
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane4)
-                .addContainerGap())
-        );
-
-        jTabbedPane1.addTab("Eliminar", jPanel3);
-
         javax.swing.GroupLayout AME_ventanaLayout = new javax.swing.GroupLayout(AME_ventana.getContentPane());
         AME_ventana.getContentPane().setLayout(AME_ventanaLayout);
         AME_ventanaLayout.setHorizontalGroup(
@@ -980,7 +917,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
                 .addContainerGap(58, Short.MAX_VALUE))
         );
 
-        Modificar.setText("jMenuItem1");
+        Modificar.setText("Modificar");
         Modificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarActionPerformed(evt);
@@ -988,10 +925,15 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         });
         pp_menuEp.add(Modificar);
 
-        Eliminar.setText("jMenuItem2");
+        Eliminar.setText("Eliminar");
+        Eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarActionPerformed(evt);
+            }
+        });
         pp_menuEp.add(Eliminar);
 
-        Modificar2.setText("jMenuItem3");
+        Modificar2.setText("Modificar");
         Modificar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Modificar2ActionPerformed(evt);
@@ -999,10 +941,15 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         });
         pp_menuEt.add(Modificar2);
 
-        Eliminar2.setText("jMenuItem4");
+        Eliminar2.setText("Eliminar");
+        Eliminar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Eliminar2ActionPerformed(evt);
+            }
+        });
         pp_menuEt.add(Eliminar2);
 
-        Modificar3.setText("jMenuItem5");
+        Modificar3.setText("Modificar");
         Modificar3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Modificar3ActionPerformed(evt);
@@ -1010,7 +957,12 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         });
         pp_menuPl.add(Modificar3);
 
-        Eliminar3.setText("jMenuItem6");
+        Eliminar3.setText("Eliminar");
+        Eliminar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Eliminar3ActionPerformed(evt);
+            }
+        });
         pp_menuPl.add(Eliminar3);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1081,8 +1033,8 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (tf_user.getText().equalsIgnoreCase("SalvadorNasrallah") &&
-                pf_pass.getText().equalsIgnoreCase("CHEESE")) {
+        if (tf_user.getText().equalsIgnoreCase("SalvadorNasrallah")
+                && pf_pass.getText().equalsIgnoreCase("CHEESE")) {
             AME_ventana.setModal(true);
             AME_ventana.pack();
             AME_ventana.setLocationRelativeTo(this);
@@ -1105,7 +1057,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
             empleo = tf_empleo.getText();
             person.add(new Empleados(empleo, nombre, edad, id, idloteria, departamentos, dinero));
             //----------------------------------------------------------------\\
-            DefaultTableModel modelo =(DefaultTableModel)tableEmpl.getModel();
+            DefaultTableModel modelo = (DefaultTableModel) tableEmpl.getModel();
             Object[] newrow = {tf_nombre.getText(), jp_edad.getValue(), tf_id.getText()};
             modelo.addRow(newrow);
             tableEmpl.setModel(modelo);
@@ -1138,7 +1090,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
             carrera = tf_carrera.getText();
             person.add(new Estudiantes(carrera, nombre, edad, id, idloteria, departamentos, dinero));
             //----------------------------------------------------------------\\
-            DefaultTableModel modelo =(DefaultTableModel)tableEstud.getModel();
+            DefaultTableModel modelo = (DefaultTableModel) tableEstud.getModel();
             Object[] newrow = {tf_nombre1.getText(), jp_edad1.getValue(), tf_id1.getText()};
             modelo.addRow(newrow);
             tableEstud.setModel(modelo);
@@ -1171,7 +1123,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
             afiliacion = cb_afiliacion.getSelectedItem().toString();
             person.add(new Politico(afiliacion, nombre, edad, id, idloteria, departamentos, dinero));
             //----------------------------------------------------------------\\
-            DefaultTableModel modelo =(DefaultTableModel)tablePolit.getModel();
+            DefaultTableModel modelo = (DefaultTableModel) tablePolit.getModel();
             Object[] newrow = {tf_nombre3.getText(), jp_edad3.getValue(), tf_id3.getText()};
             modelo.addRow(newrow);
             tablePolit.setModel(modelo);
@@ -1194,46 +1146,44 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         int edad;
         long id;
         double dinero;
-        if (person.get(pos) instanceof Empleados) {
-            nombre = tf_nombre4.getText();
-            edad = Integer.parseInt(jp_edad4.getValue().toString());
-            id = Long.parseLong(tf_id4.getText());
-            idloteria = tf_idloteria4.getText();
-            departamentos = cb_Depart4.getSelectedItem().toString();
-            dinero = Double.parseDouble(tf_dinero3.getText());
-            empleo = tf_empleo2.getText();
-            person.remove(pos);
-            person.add(new Empleados(empleo, nombre, edad, id, idloteria, departamentos, dinero));
-        }
-        tf_nombre4.setText("");
-        jp_edad4.setValue(18);
-        tf_id4.setText("");
-        tf_idloteria4.setText("");
-        cb_Depart4.setSelectedIndex(0);
-        tf_dinero3.setText("");
-        tf_empleo2.setText("");
+        nombre = tf_nombre4.getText();
+        edad = Integer.parseInt(jp_edad4.getValue().toString());
+        id = Long.parseLong(tf_id4.getText());
+        idloteria = tf_idloteria4.getText();
+        departamentos = cb_Depart4.getSelectedItem().toString();
+        dinero = Double.parseDouble(tf_dinero3.getText());
+        empleo = tf_empleo2.getText();
+        person.add(new Empleados(empleo, nombre, edad, id, idloteria, departamentos, dinero));
+        Empleados emp = new Empleados();
+        emp.setNombre(nombre);
+        emp.setIdloteria(idloteria);
+        emp.setId(id);
+        emp.setEmpleo(empleo);
+        emp.setEdad(edad);
+        emp.setDinero(dinero);
+        emp.setDepartamentos(departamentos);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        DefaultTableModel modelo =(DefaultTableModel)tableEmpl.getModel();
+        DefaultTableModel modelo = (DefaultTableModel) tableEmpl.getModel();
         Object[] newrow = {tf_nombre4.getText(), jp_edad4.getValue(), tf_id4.getText()};
-        modelo.removeRow(pos);
         modelo.addRow(newrow);
         tableEmpl.setModel(modelo);
+        modEmpleado.setVisible(false);
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void tableEmplMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableEmplMouseClicked
-        if (evt.isMetaDown()){
-            pp_menuPl.show(evt.getComponent(), evt.getX(), evt.getY());
+        if (evt.isMetaDown()) {
+            pp_menuEp.show(evt.getComponent(), evt.getX(), evt.getY());
         }
     }//GEN-LAST:event_tableEmplMouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-        DefaultTableModel modelo =(DefaultTableModel)tableEstud.getModel();
-        modelo.removeRow(pos);
+        DefaultTableModel modelo = (DefaultTableModel) tableEstud.getModel();
         Object[] newrow = {tf_nombre2.getText(), jp_edad2.getValue(), tf_id2.getText()};
         modelo.addRow(newrow);
         tableEstud.setModel(modelo);
+        modEstudiante.setVisible(false);
     }//GEN-LAST:event_jButton8MouseClicked
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -1241,38 +1191,36 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         int edad;
         long id;
         double dinero;
-        if (person.get(pos) instanceof Estudiantes) {
-            nombre = tf_nombre2.getText();
-            edad = Integer.parseInt(jp_edad2.getValue().toString());
-            id = Long.parseLong(tf_id2.getText());
-            idloteria = tf_idloteria2.getText();
-            departamentos = cb_Depart2.getSelectedItem().toString();
-            dinero = Double.parseDouble(tf_dinero4.getText());
-            carrera = tf_carrera1.getText();
-            person.remove(pos);
-            person.add(new Estudiantes(carrera, nombre, edad, id, idloteria, departamentos, dinero));
-        }
-        tf_nombre2.setText("");
-        jp_edad2.setValue(18);
-        tf_id2.setText("");
-        tf_idloteria2.setText("");
-        cb_Depart2.setSelectedIndex(0);
-        tf_dinero2.setText("");
-        tf_carrera1.setText("");
+        nombre = tf_nombre2.getText();
+        edad = Integer.parseInt(jp_edad2.getValue().toString());
+        id = Long.parseLong(tf_id2.getText());
+        idloteria = tf_idloteria2.getText();
+        departamentos = cb_Depart2.getSelectedItem().toString();
+        dinero = Double.parseDouble(tf_dinero4.getText());
+        carrera = tf_carrera1.getText();
+        person.add(new Estudiantes(carrera, nombre, edad, id, idloteria, departamentos, dinero));
+        Estudiantes estud = new Estudiantes();
+        estud.setNombre(nombre);
+        estud.setIdloteria(idloteria);
+        estud.setId(id);
+        estud.setEdad(edad);
+        estud.setDinero(dinero);
+        estud.setDepartamentos(departamentos);
+        estud.setCarreras(carrera);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void tableEstudMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableEstudMouseClicked
-        if (evt.isMetaDown()){
+        if (evt.isMetaDown()) {
             pp_menuEt.show(evt.getComponent(), evt.getX(), evt.getY());
         }
     }//GEN-LAST:event_tableEstudMouseClicked
 
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
-        DefaultTableModel modelo =(DefaultTableModel)tablePolit.getModel();
-        modelo.removeRow(pos);
+        DefaultTableModel modelo = (DefaultTableModel) tablePolit.getModel();
         Object[] newrow = {tf_nombre5.getText(), jp_edad5.getValue(), tf_id5.getText()};
         modelo.addRow(newrow);
         tablePolit.setModel(modelo);
+        modPolitico.setVisible(false);
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -1280,43 +1228,83 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         int edad;
         long id;
         double dinero;
-        if (person.get(pos) instanceof Politico) {
-            nombre = tf_nombre5.getText();
-            edad = Integer.parseInt(jp_edad5.getValue().toString());
-            id = Long.parseLong(tf_id5.getText());
-            idloteria = tf_idloteria5.getText();
-            departamentos = cb_Depart5.getSelectedItem().toString();
-            dinero = Double.parseDouble(tf_dinero5.getText());
-            afiliacion = cb_afiliacion1.getSelectedItem().toString();
-            person.remove(pos);
-            person.add(new Politico(afiliacion, nombre, edad, id, idloteria, departamentos, dinero));
-        }
-        tf_nombre5.setText("");
-        jp_edad5.setValue(18);
-        tf_id5.setText("");
-        tf_idloteria5.setText("");
-        cb_Depart5.setSelectedIndex(0);
-        tf_dinero5.setText("");
-        cb_afiliacion1.setSelectedIndex(0);
+        nombre = tf_nombre5.getText();
+        edad = Integer.parseInt(jp_edad5.getValue().toString());
+        id = Long.parseLong(tf_id5.getText());
+        idloteria = tf_idloteria5.getText();
+        departamentos = cb_Depart5.getSelectedItem().toString();
+        dinero = Double.parseDouble(tf_dinero5.getText());
+        afiliacion = cb_afiliacion1.getSelectedItem().toString();
+        person.add(new Politico(afiliacion, nombre, edad, id, idloteria, departamentos, dinero));
+        Politico pol = new Politico();
+        pol.setNombre(nombre);
+        pol.setIdloteria(idloteria);
+        pol.setId(id);
+        pol.setEdad(edad);
+        pol.setDinero(dinero);
+        pol.setDepartamentos(departamentos);
+        pol.setAfiliacion(afiliacion);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void tablePolitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablePolitMouseClicked
-        if (evt.isMetaDown()){
-            pp_menuEp.show(evt.getComponent(), evt.getX(), evt.getY());
+        if (evt.isMetaDown()) {
+            pp_menuPl.show(evt.getComponent(), evt.getX(), evt.getY());
         }
     }//GEN-LAST:event_tablePolitMouseClicked
 
     private void Modificar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Modificar2ActionPerformed
-        // TODO add your handling code here:
+        modEstudiante.setModal(true);
+        modEstudiante.pack();
+        modEstudiante.setLocationRelativeTo(this);
+        modEstudiante.setVisible(true);
+        DefaultTableModel modelo = (DefaultTableModel) tableEstud.getModel();
+        modelo.removeRow(tableEstud.getSelectedRow());
+        person.remove(tableEstud.getSelectedRowCount());
+        tableEstud.setModel(modelo);
     }//GEN-LAST:event_Modificar2ActionPerformed
 
     private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarActionPerformed
-        // TODO add your handling code here:
+        modEmpleado.setModal(true);
+        modEmpleado.pack();
+        modEmpleado.setLocationRelativeTo(this);
+        modEmpleado.setVisible(true);
+        DefaultTableModel modelo = (DefaultTableModel) tableEmpl.getModel();
+        modelo.removeRow(tableEmpl.getSelectedRow());
+        person.remove(tableEmpl.getSelectedRowCount());
+        tableEmpl.setModel(modelo);
     }//GEN-LAST:event_ModificarActionPerformed
 
     private void Modificar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Modificar3ActionPerformed
-        // TODO add your handling code here:
+        modPolitico.setModal(true);
+        modPolitico.pack();
+        modPolitico.setLocationRelativeTo(this);
+        modPolitico.setVisible(true);
+        DefaultTableModel modelo = (DefaultTableModel) tablePolit.getModel();
+        modelo.removeRow(tablePolit.getSelectedRow());
+        person.remove(tablePolit.getSelectedRowCount());
+        tablePolit.setModel(modelo);
     }//GEN-LAST:event_Modificar3ActionPerformed
+
+    private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
+        DefaultTableModel modelo = (DefaultTableModel)tableEmpl.getModel();
+        modelo.removeRow(tableEmpl.getSelectedRow());
+        person.remove(tableEmpl.getSelectedRowCount());
+        tableEmpl.setModel(modelo);
+    }//GEN-LAST:event_EliminarActionPerformed
+
+    private void Eliminar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Eliminar2ActionPerformed
+        DefaultTableModel modelo = (DefaultTableModel)tableEstud.getModel();
+        modelo.removeRow(tableEstud.getSelectedRow());
+        person.remove(tableEstud.getSelectedRowCount());
+        tableEstud.setModel(modelo);
+    }//GEN-LAST:event_Eliminar2ActionPerformed
+
+    private void Eliminar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Eliminar3ActionPerformed
+        DefaultTableModel modelo = (DefaultTableModel)tablePolit.getModel();
+        modelo.removeRow(tablePolit.getSelectedRow());
+        person.remove(tablePolit.getSelectedRowCount());
+        tablePolit.setModel(modelo);
+    }//GEN-LAST:event_Eliminar3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1417,11 +1405,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -1434,7 +1418,6 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JSpinner jp_edad;
     private javax.swing.JSpinner jp_edad1;
     private javax.swing.JSpinner jp_edad2;
