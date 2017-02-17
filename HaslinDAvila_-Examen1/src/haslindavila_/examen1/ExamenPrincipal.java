@@ -148,7 +148,11 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         pp_menuPl = new javax.swing.JPopupMenu();
         Modificar3 = new javax.swing.JMenuItem();
         Eliminar3 = new javax.swing.JMenuItem();
-        jDialog1 = new javax.swing.JDialog();
+        Rifas = new javax.swing.JDialog();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
         tf_user = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -610,11 +614,6 @@ public class ExamenPrincipal extends javax.swing.JFrame {
                 "Nombre", "Edad", "ID"
             }
         ));
-        tableALL.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tableALLMouseClicked(evt);
-            }
-        });
         jScrollPane5.setViewportView(tableALL);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -1003,15 +1002,41 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         });
         pp_menuPl.add(Eliminar3);
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jRadioButton1.setText("jRadioButton1");
+
+        jRadioButton2.setText("jRadioButton2");
+
+        jRadioButton3.setText("jRadioButton3");
+
+        jRadioButton4.setText("jRadioButton4");
+
+        javax.swing.GroupLayout RifasLayout = new javax.swing.GroupLayout(Rifas.getContentPane());
+        Rifas.getContentPane().setLayout(RifasLayout);
+        RifasLayout.setHorizontalGroup(
+            RifasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RifasLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(RifasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jRadioButton3)
+                    .addComponent(jRadioButton1))
+                .addGap(40, 40, 40)
+                .addGroup(RifasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButton2)
+                    .addComponent(jRadioButton4))
+                .addContainerGap(202, Short.MAX_VALUE))
         );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        RifasLayout.setVerticalGroup(
+            RifasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RifasLayout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addGroup(RifasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(RifasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton3)
+                    .addComponent(jRadioButton4))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1031,6 +1056,11 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         });
 
         jButton2.setText("OTROS");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1082,7 +1112,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (tf_user.getText().equalsIgnoreCase("SalvadorNasrallah")
+        if (tf_user.getText().equalsIgnoreCase("Nasrallah")
                 && pf_pass.getText().equalsIgnoreCase("CHEESE")) {
             AME_ventana.setModal(true);
             AME_ventana.pack();
@@ -1364,9 +1394,12 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         tablePolit.setModel(modelo);
     }//GEN-LAST:event_Eliminar3ActionPerformed
 
-    private void tableALLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableALLMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tableALLMouseClicked
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Rifas.setModal(true);
+        Rifas.pack();
+        Rifas.setLocationRelativeTo(this);
+        Rifas.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1411,6 +1444,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem Modificar;
     private javax.swing.JMenuItem Modificar2;
     private javax.swing.JMenuItem Modificar3;
+    private javax.swing.JDialog Rifas;
     private javax.swing.JComboBox<String> cb_Depart;
     private javax.swing.JComboBox<String> cb_Depart1;
     private javax.swing.JComboBox<String> cb_Depart2;
@@ -1427,7 +1461,6 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1476,6 +1509,10 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
