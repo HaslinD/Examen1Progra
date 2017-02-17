@@ -91,6 +91,9 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tablePolit = new javax.swing.JTable();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tableALL = new javax.swing.JTable();
         modEmpleado = new javax.swing.JDialog();
         jLabel28 = new javax.swing.JLabel();
         tf_nombre4 = new javax.swing.JTextField();
@@ -145,6 +148,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         pp_menuPl = new javax.swing.JPopupMenu();
         Modificar3 = new javax.swing.JMenuItem();
         Eliminar3 = new javax.swing.JMenuItem();
+        jDialog1 = new javax.swing.JDialog();
         jLabel1 = new javax.swing.JLabel();
         tf_user = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -596,7 +600,41 @@ public class ExamenPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Modificar", jPanel2);
+        jTabbedPane1.addTab("Modificar / Eliminar", jPanel2);
+
+        tableALL.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Edad", "ID"
+            }
+        ));
+        tableALL.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableALLMouseClicked(evt);
+            }
+        });
+        jScrollPane5.setViewportView(tableALL);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 563, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(69, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Reportes", jPanel3);
 
         javax.swing.GroupLayout AME_ventanaLayout = new javax.swing.GroupLayout(AME_ventana.getContentPane());
         AME_ventana.getContentPane().setLayout(AME_ventanaLayout);
@@ -965,6 +1003,17 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         });
         pp_menuPl.add(Eliminar3);
 
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
@@ -1058,9 +1107,12 @@ public class ExamenPrincipal extends javax.swing.JFrame {
             person.add(new Empleados(empleo, nombre, edad, id, idloteria, departamentos, dinero));
             //----------------------------------------------------------------\\
             DefaultTableModel modelo = (DefaultTableModel) tableEmpl.getModel();
+            DefaultTableModel modelo1 = (DefaultTableModel) tableALL.getModel();
             Object[] newrow = {tf_nombre.getText(), jp_edad.getValue(), tf_id.getText()};
             modelo.addRow(newrow);
+            modelo1.addRow(newrow);
             tableEmpl.setModel(modelo);
+            tableALL.setModel(modelo);
             //----------------------------------------------------------------\\
             JOptionPane.showMessageDialog(null, "Ha sido agregado exitosamente");
         } catch (Exception e) {
@@ -1091,9 +1143,12 @@ public class ExamenPrincipal extends javax.swing.JFrame {
             person.add(new Estudiantes(carrera, nombre, edad, id, idloteria, departamentos, dinero));
             //----------------------------------------------------------------\\
             DefaultTableModel modelo = (DefaultTableModel) tableEstud.getModel();
+            DefaultTableModel modelo1 = (DefaultTableModel) tableALL.getModel();
             Object[] newrow = {tf_nombre1.getText(), jp_edad1.getValue(), tf_id1.getText()};
             modelo.addRow(newrow);
+            modelo1.addRow(newrow);
             tableEstud.setModel(modelo);
+            tableALL.setModel(modelo);
             //----------------------------------------------------------------\\
             JOptionPane.showMessageDialog(null, "Ha sido agregado exitosamente");
         } catch (Exception e) {
@@ -1124,9 +1179,12 @@ public class ExamenPrincipal extends javax.swing.JFrame {
             person.add(new Politico(afiliacion, nombre, edad, id, idloteria, departamentos, dinero));
             //----------------------------------------------------------------\\
             DefaultTableModel modelo = (DefaultTableModel) tablePolit.getModel();
+            DefaultTableModel modelo1 = (DefaultTableModel) tableALL.getModel();
             Object[] newrow = {tf_nombre3.getText(), jp_edad3.getValue(), tf_id3.getText()};
             modelo.addRow(newrow);
+            modelo1.addRow(newrow);
             tablePolit.setModel(modelo);
+            tableALL.setModel(modelo);
             //----------------------------------------------------------------\\
             JOptionPane.showMessageDialog(null, "Ha sido agregado exitosamente");
         } catch (Exception e) {
@@ -1306,6 +1364,10 @@ public class ExamenPrincipal extends javax.swing.JFrame {
         tablePolit.setModel(modelo);
     }//GEN-LAST:event_Eliminar3ActionPerformed
 
+    private void tableALLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableALLMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tableALLMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1365,6 +1427,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1406,6 +1469,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -1415,6 +1479,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
@@ -1431,6 +1496,7 @@ public class ExamenPrincipal extends javax.swing.JFrame {
     private javax.swing.JPopupMenu pp_menuEp;
     private javax.swing.JPopupMenu pp_menuEt;
     private javax.swing.JPopupMenu pp_menuPl;
+    private javax.swing.JTable tableALL;
     private javax.swing.JTable tableEmpl;
     private javax.swing.JTable tableEstud;
     private javax.swing.JTable tablePolit;
